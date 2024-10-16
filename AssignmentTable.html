@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /*General table style*/
+        .content-table{
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            min-width: 400px;
+            border-radius: 10px 10px 0 0;
+            /*Clips the background of the top right and left cells to fit the rounded border*/
+            overflow: hidden;
+            /*Set shadow around the table with a blur effect*/
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /*Styling the table's header*/
+        .content-table thead tr{
+            background: #009879;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        /*Spacing content in the table cells*/
+        th,td{
+            /*Padding creates space around an elements content*/
+            padding: 12px 15px;
+        }
+
+        /*Setting bottom borders for the table's body*/
+        .content-table tbody tr{
+            border-bottom: 1px solid #dddddd;
+        }
+
+        /*Target every even row in the table body*/
+        .content-table tbody tr:nth-of-type(even){
+            background-color: #f3f3f3;
+        }
+
+        /*Targeting the bottom border to have similar background as header*/
+        .content-table tbody tr:last-of-type{
+            border-bottom: 2px solid #009879;
+        }
+
+        /*Setting style for active row*/
+        .content-table tbody tr.active-r{
+            font-weight: bold;
+            color: #009879;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <table class="content-table">
+
+        <!--Defining table head-->
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Points</th>
+                <th>Team</th>
+            </tr>
+        </thead>
+
+        <!--Defining table body-->
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Domenic</td>
+                <td>88,110</td>
+                <td>dcode</td>
+            </tr>
+            <!--Single out the active row-->
+            <tr class="active-r">
+                <td>2</td>
+                <td>Sally</td>
+                <td>72,400</td>
+                <td>Students</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Nick</td>
+                <td>52,300</td>
+                <td>dcode</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</body>
+</html>
